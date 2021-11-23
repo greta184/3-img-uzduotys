@@ -12,6 +12,9 @@
             margin: 0;
             background-color: antiquewhite;
         }
+        div > div {
+            float: left;
+        }
         .col-1 {
             width: 10%;
         }
@@ -39,8 +42,17 @@
         .col-9 {
             width: 90%;
         }
-        .col-9 {
+        .col-10 {
             width: 100%;
+        }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        div{
+            padding: 0.5rem;
+            border: 1px solid black;
         }
     </style>
 </head>
@@ -48,17 +60,22 @@
     <header>
     </header>
     <main>
-        <div class="box">
-            <div class="col-5">
+        <div class="clearfix">
+            <div class="col-6">
                 <h1>about me</h1>
-                <p>ui designer</p>
-                <p> text text</p>
-                <img src="" alt="Like">
-                <img src="" alt="follow">
+                <p>
+                    I'm a UI DESIGNER and Front End Developer from Sydney, AUstralia
+                </p>
+                <p>
+                    I enjoy taking complex problems and turning them into simple. I enjoy taking complex problems and turning them into simple. I enjoy taking complex problems and turning them into simple. I enjoy taking complex problems and turning them into simple.
+                </p>
+                <p>
+                    When I'm not coding or pushing pixels, yuo'll find me in the gym or on the court shooting some hoops.
+                </p>
+                <img src="./images/" alt="like">
+                <img src="./images/" alt="twitter">
             </div>
-            <div class="box2">
-                <img src="" alt="photo">
-            </div>
+            <div class="col-3">photo</div>
         </div>
     </main>
     <footer>
